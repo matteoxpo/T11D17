@@ -18,7 +18,7 @@ The russian version of the task can be found in the repository.
 4. [Chapter IV](#chapter-iv)
 
 
-## Chapter I
+# Chapter I
 
 ## Level 3. Room 3.
 
@@ -58,7 +58,7 @@ Next to a pile of papers on the desk, someone left a clipping. Did the AI someho
 ***LOADING...***
 
 
-## Chapter II
+# Chapter II
 
 ## List 1. MCO.
 
@@ -113,7 +113,7 @@ The rest of the text is illegible
 ***LOADING...***
 
 
-## Chapter III
+# Chapter III
 
 ## Quest 1. The Doors. 
 
@@ -189,7 +189,7 @@ You give it some thought and remember that a stack seems to be a variety of dyna
 ***LOADING...***
 
 
-## Chapter IV
+# Chapter IV
 
 \> *Push the last task in the repository*
 

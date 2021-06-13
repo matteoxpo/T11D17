@@ -17,7 +17,7 @@
 4. [Chapter IV](#chapter-iv)
 
 
-## Chapter I
+# Chapter I
 
 ## Level 3. Room 3.
 
@@ -57,7 +57,7 @@ LOADING Room 3…***
 ***LOADING...***
 
 
-## Chapter II
+# Chapter II
 
 ## List 1. MCO.
 
@@ -112,7 +112,7 @@ LOADING Room 3…***
 ***LOADING...***
 
 
-## Chapter III
+# Chapter III
 
 ## Quest 1. The Doors. 
 
@@ -188,7 +188,7 @@ LOADING Room 3…***
 ***LOADING...***
 
 
-## Chapter IV
+# Chapter IV
 
 \> *Запушить последнюю задачу в репозиторий*
 
