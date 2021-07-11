@@ -1,6 +1,8 @@
 # T11D17
 The russian version of the task can be found in the repository.
 
+You can find some useful video materials [here](https://edu.21-school.ru/video/selection/062eaa22-bce7-407c-9b9d-e334bb2ad5a2).
+
 ![This day will help you get acquainted with structures and unions in C.](misc/eng/images/day11_door.png)
 
 
@@ -142,7 +144,17 @@ Are you sure? This may be personal...
 
 Looks like a reminder that someone left long before you. And this reminder may help you. You should pay attention to this door control module.
 
-***== Quest 1 received. Create door structure in src/door_struct.h. The structure itself consists of an integer door id and an integer status (0 – closed, 1 – open). Correct the src/dmanager_module.c program so it sorts the initialized array of doors in ascending order using any algorithm and displays it in the following format: "<door id>, <door status>". In addition to that, set the status "closed" for all doors. Changing the door initialization function is not allowed. Stick to the structured approach. The program should be built using a Makefile. Stage name: door_struct. The executable file should be located in the build folder at the root of the repository. It should be named Quest_1. ==***
+***== Quest 1 received. Create door structure in src/door_struct.h. 
+The structure itself consists of an integer door id and an integer status 
+(0 – closed, 1 – open). Correct the src/dmanager_module.c program so it 
+sorts the initialized array of doors in ascending order using any algorithm 
+and displays it in the following format: "<door id>, <door status>". 
+In addition to that, set the status "closed" for all doors. Changing the 
+door initialization function is not allowed. Stick to the structured approach. 
+The program should be built using a Makefile. Stage name: door_struct. The 
+executable file should be located in the build folder at the root of the 
+repository. It should be named Quest_1. The solution will be checked for memory 
+leaks and for the style norm, instructions as usual-in `materials` ==***
 
 ***LOADING...***
 
@@ -165,7 +177,20 @@ Here's the rest of the note.
 There was something about a singly linked list on one of the sheets. You should find out more about this list and memory allocation for it as well. \
 You also have to remember to solve the last working polynomial from the file and assign the status "open" to the door with that ordinal number in the array after its sorting and primary output.
 
-***== Quest 2 received. Develop an src/polynomial.c program that takes a line with a polynomial as input data, e.g. -5*x^6+3*x^2-x+7, splits it into tokens, uses them to form the elements of a singly linked list, and performs the necessary calculations. The answer is output to stdout. You do not have to enter the argument manually; you can set it as a constant with a value of three. You can find a clue for polynomial's implementation as a list in the materials folder. Add functions for working with the list separately. The materials folder also contains a polynomial that needs to be solved. Its answer is the ordinal number of the door in the sorted array that has to receive the status "open", in the src/dmanager_module.c program after sorting and output. The program should be built using a Makefile. Stage name: polynomial. The executable file should be located in the build folder at the root of the repository. It should be named Quest_2. ==***
+***== Quest 2 received. Develop an src/polynomial.c program that takes a line 
+with a polynomial as input data, e.g. `-5*x^6+3*x^2-x+7`, splits it into tokens, 
+uses them to form the elements of a singly linked list, and performs the 
+necessary calculations. The answer is output to stdout. You do not have to
+enter the argument manually; you can set it as a constant with a value of 
+three. You can find a clue for polynomial's implementation as a list in the 
+materials folder. Add functions for working with the list separately. The 
+materials folder also contains a polynomial that needs to be solved. Its 
+answer is the ordinal number of the door in the sorted array that has to 
+receive the status "open", in the src/dmanager_module.c program after sorting 
+and output. The program should be built using a Makefile. Stage name: polynomial. 
+The executable file should be located in the build folder at the root of the 
+repository. It should be named Quest_2.
+This quest will also be checked for memory leaks and the style norm. ==***
 
 ***LOADING...***
 
@@ -184,7 +209,16 @@ However, you notice a small screen open on the door. The message says in big let
 You go back to the computer and think about what it could possibly mean. It's a shame there are no more pieces of paper with clues anywhere... \
 You give it some thought and remember that a stack seems to be a variety of dynamic data structures, which is often implemented as a list. Looks like in order to open the door you also need to create a dynamic stack that contains integers. You need to implement the stack's standard interface: data pushing and popping operations. Also, don't forget to save all implementations in src/stack.c, whereas function declarations and structures in src/stack.h. You should also write module tests in tests/stack_test.c to make sure the stack and its functions are working. Who knows what might happen if the stack doesn't work correctly..
 
-***== Quest 3 received. Develop an src/stack.c program which contains implementations of functions for working with a dynamic stack (init, push, pop, destroy). Put declarations of functions and structures of the dynamic stack that stores integers in src/stack.h. Write module tests for checking the push and pop functions of the stack in src/stack_test.c. Method functions should return SUCCESS if the test is successful and FAIL if there is an error. The tests should be built using a Makefile. Stage name: stack_test. The executable file should be located in the build folder at the root of the repository. It should be named Quest_3. ==***
+***== Quest 3 received. Develop an src/stack.c program which contains 
+implementations of functions for working with a dynamic stack (init, push, 
+pop, destroy). Put declarations of functions and structures of the dynamic 
+stack that stores integers in src/stack.h. Write module tests for checking 
+the push and pop functions of the stack in src/stack_test.c. Method functions 
+should return SUCCESS if the test is successful and FAIL if there is an error. 
+The tests should be built using a Makefile. Stage name: stack_test. 
+The executable file should be located in the build folder at the root of 
+the repository. It should be named Quest_3.
+Please note: this quest will be tested by the `cppcheck` utility. ==***
 
 ***LOADING...***
 
