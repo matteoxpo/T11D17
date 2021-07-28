@@ -156,6 +156,22 @@ executable file should be located in the build folder at the root of the
 repository. It should be named Quest_1. The solution will be checked for memory 
 leaks and for the style norm, instructions as usual-in `materials` ==***
 
+0, 0<br/>
+1, 0<br/>
+2, 0<br/>
+3, 0<br/>
+4, 0<br/>
+5, 0<br/>
+6, 0<br/>
+7, 0<br/>
+8, 0<br/>
+9, 0<br/>
+10, 0<br/>
+11, 0<br/>
+12, 0<br/>
+13, 0<br/>
+14, 0<br/>
+
 ***LOADING...***
 
 
@@ -192,6 +208,11 @@ The executable file should be located in the build folder at the root of the
 repository. It should be named Quest_2.
 This quest will also be checked for memory leaks and the style norm. ==***
 
+| Input | Output |
+| ------ | ------ |
+| x^5-10*x^3+3*x^2+5 | 5 |
+| x^1+5*x^0 | 8 |
+
 ***LOADING...***
 
 
@@ -219,6 +240,8 @@ The tests should be built using a Makefile. Stage name: stack_test.
 The executable file should be located in the build folder at the root of 
 the repository. It should be named Quest_3.
 Please note: this quest will be tested by the `cppcheck` utility. ==***
+
+> ***This task does not provide for autotesting!***
 
 ***LOADING...***
 
