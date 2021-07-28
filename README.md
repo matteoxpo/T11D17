@@ -148,7 +148,7 @@ Looks like a reminder that someone left long before you. And this reminder may h
 The structure itself consists of an integer door id and an integer status 
 (0 – closed, 1 – open). Correct the src/dmanager_module.c program so it 
 sorts the initialized array of doors in ascending order using any algorithm 
-and displays it in the following format: "<door id>, <door status>". 
+and displays it in the following format: "door id, door status". 
 In addition to that, set the status "closed" for all doors. Changing the 
 door initialization function is not allowed. Stick to the structured approach. 
 The program should be built using a Makefile. Stage name: door_struct. The 
