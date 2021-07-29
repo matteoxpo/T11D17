@@ -200,10 +200,7 @@ necessary calculations. The answer is output to stdout. You do not have to
 enter the argument manually; you can set it as a constant with a value of 
 three. You can find a clue for polynomial's implementation as a list in the 
 materials folder. Add functions for working with the list separately. The 
-materials folder also contains a polynomial that needs to be solved. Its 
-answer is the ordinal number of the door in the sorted array that has to 
-receive the status "open", in the src/dmanager_module.c program after sorting 
-and output. The program should be built using a Makefile. Stage name: polynomial. 
+materials folder also contains a polynomial that needs to be solved. The program should be built using a Makefile. Stage name: polynomial. 
 The executable file should be located in the build folder at the root of the 
 repository. It should be named Quest_2.
 This quest will also be checked for memory leaks and the style norm. ==***
