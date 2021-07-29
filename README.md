@@ -207,8 +207,8 @@ This quest will also be checked for memory leaks and the style norm. ==***
 
 | Input | Output |
 | ------ | ------ |
-| x^5-10*x^3+3*x^2+5 | 5 |
-| x^1+5*x^0 | 8 |
+| x^5-10`*`x^3+3`*`x^2+5 | 5 |
+| x^1+5`*`x^0 | 8 |
 
 ***LOADING...***
 
