@@ -5,7 +5,7 @@
 #include "door_struct.h"
 
 #define DOORS_COUNT 15
-#define MAX_ID 100000
+#define MAX_ID_SEED 10000
 
 void initialize_doors(struct door* doors);
 
@@ -27,10 +27,10 @@ void initialize_doors(struct door* doors)
 {
     srand(time(0)); 
     
-    int seed = rand() % MAX_ID;
+    int seed = rand() % MAX_ID_SEED;
     for (int i = 0; i < DOORS_COUNT; i++)
     {
-        doors[i].id = (i + seed) % MAX_ID;
+        doors[i].id = (i + seed) % DOORS_COUNT;
         doors[i].status = rand() % 2;
     }
 }
