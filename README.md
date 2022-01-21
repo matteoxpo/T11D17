@@ -15,7 +15,7 @@ You can find some useful video materials [here](https://edu.21-school.ru/video/s
  2.2. [List 2. Instructions.](#list-2-instructions)
 3. [Chapter III](#chapter-iii) \
  3.1. [Quest 1. The Doors.](#quest-1-the-doors) \
- 3.3. [Quest 2. Polynomial.](#quest-2-polynomial) \
+ 3.3. [Quest 2. Linked List.](#quest-2-linked-list) \
  3.4. [Quest 3. Stack for key.](#quest-3-stack-for-key) 
 4. [Chapter IV](#chapter-iv)
 
@@ -147,7 +147,7 @@ Looks like a reminder that someone left long before you. And this reminder may h
 ***== Quest 1 received. Create door structure in src/door_struct.h. 
 The structure itself consists of an integer door id and an integer status 
 (0 – closed, 1 – open). Correct the src/dmanager_module.c program so it 
-sorts the initialized array of doors in ascending order using any algorithm 
+sorts the initialized array of doors in ascending order by ids using any algorithm 
 and displays it in the following format: "door id, door status". 
 In addition to that, set the status "closed" for all doors. Changing the 
 door initialization function is not allowed. Stick to the structured approach. 
@@ -175,7 +175,7 @@ leaks and for the style norm, instructions as usual-in `materials` ==***
 ***LOADING...***
 
 
-## Quest 2. Polynomial.
+## Quest 2. Linked List.
 
 Looks like door initialization works. But how can you get out? Which door should you assign the "open" status to? Based on the notes, if you do it for all doors – it may cause some kind of disaster.
 
@@ -184,38 +184,26 @@ Looks like door initialization works. But how can you get out? Which door should
 Here's the rest of the note.
 
 >The necessary door changes every day. \
->The number of the current one is calculated using a polynomial function, a different one every time. \
->The function looks as follows: P(x) = a*x^n + b*x^(n−1) + ... + y * x + z. \
->Through trial and error, it has turned out that the argument of the function is always the same – 3. \
->The last working polynomial is in the materials folder. \
->The same folder contains small clues for creating a program for solving the given polynomial using a singly linked list.
+>The number of the current door is calculated via a polynomial function by the indoor modules of the room. Module source code is not available. \
+>By reverse engineering, it was revealed that this module does not know how to work with arrays. In its work, the module used a dynamically linked library with the implementation of a singly linked list. This library is critical for the operation of the module, however, the binary file with the library was damaged.
 
 There was something about a singly linked list on one of the sheets. You should find out more about this list and memory allocation for it as well. \
-You also have to remember to solve the last working polynomial from the file and assign the status "open" to the door with that ordinal number in the array after its sorting and primary output.
 
-***== Quest 2 received. Develop an src/polynomial.c program that takes a line 
-with a polynomial as input data, e.g. `-5*x^6+3*x^2-x+7`, splits it into tokens, 
-uses them to form the elements of a singly linked list, and performs the 
-necessary calculations. The answer is output to stdout. You do not have to
-enter the argument manually; you can set it as a constant with a value of 
-three. You can find a clue for polynomial's implementation as a list in the 
-materials folder. Add functions for working with the list separately. The 
-materials folder also contains a polynomial that needs to be solved. The program should be built using a Makefile. Stage name: polynomial. 
-The executable file should be located in the build folder at the root of the 
-repository. It should be named Quest_2.
-This quest will also be checked for memory leaks and the style norm. ==***
-
-| Input | Output |
-| ------ | ------ |
-| x^5-10`*`x^3+3`*`x^2+5 | 5 |
-| x^1+5`*`x^0 | 8 |
+***== Quest 2 received. Develop an src/list.c program which contains implementations of functions for working
+with a singly linked list of doors (`struct node* init(struct door* door)` - initialization of the singly linked list structure based on the passed `struct door`, `struct node* add_door(struct node* elem, struct door* door)` - inserting a new `struct door` element into a singly linked list after the passed `elem` node, `struct node* find_door(int door_id, struct node* root)` - search for a door in the list by its id, `void remove_door(struct node* elem)` - deleting a list element, `void destroy(struct node* root)` - freeing the memory occupied by the list structure). Move the declarations of these functions and the structure of the singly linked list to the file src/list.h. Write module tests for checking 
+the add_door and remove_door functions of the singly linked list in src/list_test.c. Method functions 
+should return SUCCESS if the test is successful and FAIL if there is an error. 
+The tests should be built using a Makefile. Stage name: list_test. 
+The executable file should be located in the build folder at the root of 
+the repository. It should be named Quest_2.
+Please note: this quest will be tested by the `cppcheck` utility.==***
 
 ***LOADING...***
 
 
 ## Quest 3. Stack for key. 
 
-Ok, the door you need is now open, it's time to leave.
+Okay, the necessary library for the current door number search module has been written. You see on the screen a rapidly filling scale of the activity of the algorithm's calculations. After a couple of seconds, the number of the door you need appears on the screen. With relief and a sense of accomplishment, you head for the door.
 
 \> *Pull the handle*
 
