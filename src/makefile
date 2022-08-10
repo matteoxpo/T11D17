@@ -11,7 +11,7 @@ Q3_SOURCES = stack.c stack_test.c
 Q3_OBJECTS = $(Q3_SOURCES:.c=.o)
 
 EXECUTABLE = main
-QUEST = Quest_
+QUEST = ../Build/Quest_
 QUESTS = $(QUEST)1 $(QUEST)2 $(QUEST)3
 all: door_struct list_test stack_test
 
@@ -32,3 +32,4 @@ rebuild: clean door_struct list_test stack_test
 clean:
 	-rm $(EXECUTABLE)
 	-rm $(Q1_OBJECTS) $(Q2_OBJECTS) $(Q3_OBJECTS)
+	-rm $(QUESTS)
