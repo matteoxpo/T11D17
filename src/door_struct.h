@@ -11,4 +11,5 @@ void set_status_door(struct door* doors, int status);
 void door_sort(struct door* doors);
 void door_swap(struct door* doors, int i, int j);
 void door_output(struct door* doors);
+
 #endif
