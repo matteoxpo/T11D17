@@ -69,7 +69,7 @@ void test2(struct door el1, struct door el2, struct door el3, struct door el4,
   add_door(n4, &el5);
 
   struct node *n5 = find_door(el5.id, n1);
-  printf("TEST2 - removing element - root from list\n");
+  printf("\n\nTEST2 - removing element - root from list\n");
   int len5 = list_len(n1);
   printf("List size:%d\n", len5);
   list_output(n1);
@@ -102,12 +102,21 @@ void test2(struct door el1, struct door el2, struct door el3, struct door el4,
 }
 
 void test3(struct door el1, struct door el2) {
-  struct node *n1 = init(&el1);  // n1 <-> root
+  printf("\n\nTEST3 - adding elements in empty list\n");
+  struct node *n1 = NULL;
+  list_output(n1);
+  printf("\n");
+  n1 = init(&el1);  // n1 <-> root
 
   add_door(n1, &el2);  // поставили после корня эл2
   struct node *n2 = find_door(el2.id, n1);
+  list_output(n1);
+  if (list_len(n1) == 2)
+    printf("\nSUCCESS");
+  else
+    printf("FAIL");
 
-  printf("TEST3 - removing all elements from list\n");
+  printf("\n\nTEST3 - removing all elements from list\n");
   list_output(n1);
   printf("\n");
   remove_door(n2, n1);
@@ -131,9 +140,9 @@ int main() {
   door_init(&el3, 1, 1);
   door_init(&el4, 4, 0);
   door_init(&el5, 5, 1);
-  // test1(el1, el2, el3, el4, el5);
+  test1(el1, el2, el3, el4, el5);
   test2(el1, el2, el3, el4, el5);
-  //  test3(el1, el2);
+  test3(el1, el2);
 
   return 0;
 }
