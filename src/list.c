@@ -32,7 +32,7 @@ struct node* find_door(int door_id, struct node* root) {
   }
   return search;
 }
-struct node* remove_door(struct node* elem, struct node* root) {
+struct node* remove_door(const struct node* elem, struct node* root) {
   if (root != NULL && elem != NULL) {
     struct node* prev = root;
     struct node* n = root;

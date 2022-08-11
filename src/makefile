@@ -31,5 +31,4 @@ rebuild: clean door_struct list_test stack_test
 
 clean:
 	-rm $(EXECUTABLE)
-	-rm $(Q1_OBJECTS) $(Q2_OBJECTS) $(Q3_OBJECTS)
-	-rm $(QUESTS)
+	-rm *.o
